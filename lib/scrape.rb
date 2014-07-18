@@ -2,7 +2,7 @@ require 'nokogiri'
 require 'open-uri'
 
 class Weather
-  
+
   def initialize
     rain = open('http://www.weather.com/weather/today/Westwood+NJ+07675:4:US')
     doc = Nokogiri::HTML(open(rain))
@@ -19,7 +19,7 @@ class DailyQuote
   def initialize
     inspirational_quote = open('http://www.dailyinspirationalquotes.in/')
     doc = Nokogiri::HTML(open(inspirational_quote))
-    @quote = doc.css("#item-2884 > header > h1 > a").text
+    @quote = doc.css("article.item:first-child > header > h1 > a").text
   end
 
   def quote

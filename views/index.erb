@@ -2,11 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tweet App</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <title>This is cool.</title>
+  <link rel="stylesheet" href="../public/css/style.css">
 </head>
-<body>
-  
-  
-</body>
+<font color= #FF944D><center><h1>
+And when it rains on your parade, look up rather than down. Without the rain, there would be no rainbow.
+-Gilbert K. Chesterton
+</h1></center></font>
+
+<body background="http://static.tumblr.com/c9401245aeb5d46be3385b89fdd5e8b1/9cut3mb/4W9mfc908/tumblr_static_tumblr-barn.jpg">
+
+  <center><h2>
+    <%if @new_rain.percent.delete("%").to_i >= 50%>
+        <font color= #3399FF>The chance of rain is <%=@new_rain.percent%>. Don't forget to bring an umbrella!</font>
+          <img src="http://www.yassassindevonrex.com/images/duck_holding_umbrella_rain.md_clr.gif" width="200px" height="300px">
+          
+    <%else%>
+      <font color= "yellow">Enjoy the sun! </font>
+        <img src="http://2.bp.blogspot.com/-ABdz2McyHUU/U4kdbfFif3I/AAAAAAAAAMU/wEStw86RSAc/s1600/sun.png" width="300px" height="300px">
+    <% end %>
+  </h2></center>
+ 
+  <center><p>
+    Inspirational Quote of the Day: <%=@new_quote.quote%>.
+  </p></center>
+
+
 </html>

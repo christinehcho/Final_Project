@@ -6,3 +6,5 @@ gem 'rake'
 gem 'nokogiri'
 gem 'mailgun'
 gem 'pry'
+gem 'twilio-ruby'
+
